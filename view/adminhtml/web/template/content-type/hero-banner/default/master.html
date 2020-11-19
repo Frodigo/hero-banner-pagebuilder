@@ -1,0 +1,18 @@
+<div attr="data.main.attributes" ko-style="data.main.style" css="data.main.css" class="hero-block">
+    <figure class="hero-block__figure">
+        <img if="data.desktop_image.attributes().src"
+             attr="data.desktop_image.attributes"
+             class="hero-block__image pagebuilder-mobile-hidden"
+             css="data.desktop_image.css"
+             ko-style="data.desktop_image.style" />
+        <img if="data.mobile_image.attributes().src"
+             attr="data.mobile_image.attributes"
+             class="hero-block__image pagebuilder-mobile-only"
+             css="data.mobile_image.css"
+             ko-style="data.mobile_image.style" />
+    </figure>
+    <section class="hero-block__tape">
+        <h2 class="hero-block__heading" attr="data.heading.attributes" html="data.heading.html"></h2>
+        <a class="hero-block__action" if="data.button_url.attributes().href" attr="data.button_url.attributes" html="data.link_text.html"></a>
+    </section>
+</div>
