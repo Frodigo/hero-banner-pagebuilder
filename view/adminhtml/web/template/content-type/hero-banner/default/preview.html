@@ -1,0 +1,19 @@
+<div class="pagebuilder-content-type pagebuilder-hero-banner type-nested" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template" />
+    <div attr="data.main.attributes" ko-style="data.main.style" css="data.main.css" class="hero-block">
+        <figure class="hero-block__figure">
+            <scope args="getUploader().getUiComponent()">
+                <render />
+            </scope>
+            <img if="data.desktop_image.attributes().src"
+                 attr="data.desktop_image.attributes"
+                 class="preview-image"
+                 css="data.desktop_image.css"
+                 ko-style="data.desktop_image.style" />
+        </figure>
+        <section class="hero-block__tape">
+            <h2 class="hero-block__heading" attr="data.heading.attributes" data-bind="liveEdit: { field: 'heading', placeholder: $t('Heading') }"></h2>
+            <div class="hero-block__action" attr="data.link_text.attributes" data-bind="liveEdit: { field: 'link_text', placeholder: $t('Button text') }"></div>
+        </section>
+    </div>
+</div>
